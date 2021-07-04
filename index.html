@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web App - Simple Interest Calculator</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,9 +13,11 @@
     <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
         <div class="text-div">
-            Amount <input type="number" id="principal">
+            Amount
+            <input type="number" id="principal" value=1000>
             <br />
-            Rate <input type="range" id="rate" min=1 max=20 value=10.25>
+            Rate
+            <input onchange="updateRate()" type="range" id="rate" step="0.25" min=1 max=20 value=10.25>
             <span id="rate_val"> 10.25%</span>
             <br />
 
@@ -33,10 +34,12 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select> <br />
-            Interest : <span id="result"></span><br>
+            <br />
 
             <button onclick="compute()">Compute Interest</button>
-            
+            <br />
+            <br />
+            Interest : <span id="result"></span><br>
         </div>
         <footer>
 
@@ -47,6 +50,7 @@
         </footer>
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
