@@ -15,7 +15,7 @@ let year
 const updateRate = () => {
     // Update rate in the span elem
     rate = rateField.value;
-    rateValue.innerText = rate
+    rateValue.innerText = `${rate}%`
 }
 
 // Compute value
