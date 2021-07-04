@@ -35,11 +35,11 @@ function compute() {
         years = yearsField.value;
         year = new Date().getFullYear() + parseInt(years);
         interest = principal * years * rate / 100;
-        resultString = `If you deposit ${principal}
-        at an interest rate of ${rate}%.
-        You will receive an amount of ${interest},
-        in the year ${year}.`
-        resultField.innerText = resultString;
+        resultString = `If you deposit <mark>${principal}</mark> <br>
+        at an interest rate of <mark>${rate}% </mark>.<br>
+        You will receive an amount of <mark>${interest}</mark>,<br>
+        in the year <mark>${year}</mark>.`
+        resultField.innerHTML = resultString;
     }
 
 }
